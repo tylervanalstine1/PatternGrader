@@ -40,9 +40,8 @@ input[type="number"] {
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    padding: 8px 12px;
+    background-color: #ff69b4; /* Hot pink */
     color: white;
     border: none;
     border-radius: 5px;
@@ -50,7 +49,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #ff85c1; /* Lighter pink on hover */
 }
 
 table {
