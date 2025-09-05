@@ -3,9 +3,9 @@ function addMeasurement() {
     const div = document.createElement('div');
     div.className = 'measurement';
     div.innerHTML = `
-        <input type="text" placeholder="Measurement Name" class="m-name">
-        <input type="number" placeholder="Value" class="m-value">
-        <button type="button" onclick="removeMeasurement(this)">Remove</button>
+        <input type="text" placeholder="✂️ Measurement Name (e.g., Bust, Waist)" class="m-name">
+        <input type="number" placeholder="📏 Value (inches/cm)" class="m-value">
+        <button type="button" onclick="removeMeasurement(this)">🗑️ Remove</button>
     `;
     container.appendChild(div);
 }

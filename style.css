@@ -1,63 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(221, 160, 221, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 650px;
     margin: 40px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(255, 105, 180, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    position: relative;
+}
+
+.container::before {
+    content: "✨";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    animation: sparkle 2s ease-in-out infinite alternate;
+}
+
+.container::after {
+    content: "💖";
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 2em;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+    100% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #d63384;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+}
+
+h2 {
+    color: #d63384;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+p {
+    color: #6c5ce7;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.measurement {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+.measurement input[type="text"],
+.measurement input[type="number"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ffb3d9;
+    border-radius: 25px;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.measurement input[type="text"]:focus,
+.measurement input[type="number"]:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+    transform: translateY(-2px);
 }
 
 form label {
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
+    color: #d63384;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
-input[type="number"] {
+#factor {
     width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 12px 15px;
+    border: 2px solid #ffb3d9;
+    border-radius: 25px;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#factor:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+    transform: translateY(-2px);
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    margin: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #ff1493 0%, #dc143c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+.measurement button {
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.measurement button:hover {
+    background: linear-gradient(135deg, #c44569 0%, #8e4162 100%);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 25px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
 }
 
 th, td {
     text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 182, 193, 0.3);
 }
 
 th {
-    background-color: #f2f2f2;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    color: #6c5ce7;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 182, 193, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(255, 105, 180, 0.1);
+    transition: background-color 0.3s ease;
 }
