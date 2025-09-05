@@ -14,6 +14,13 @@ body {
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
+.measurement {
+    display: flex;
+    gap: 10px;       /* Space between each input and the button */
+    margin-bottom: 15px; /* Space between rows */
+    align-items: center; /* Vertically center the inputs and button */
+}
+
 h1 {
     text-align: center;
     color: #333;
@@ -61,10 +68,4 @@ th, td {
 th {
     background-color: #f2f2f2;
 
-.measurement {
-    display: flex;
-    align-items: center;
-    gap: -30px;           /* Adds space between the inputs and the remove button */
-    margin-bottom: -30px; /* Adds space between each measurement row */
-}
 }
