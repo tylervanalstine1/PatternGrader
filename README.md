@@ -1,6 +1,9 @@
 # PatternGrader
 A Project to help my wife grade her sewing patterns. 
 
+try it here
+https://tylervanalstine1.github.io/PatternGrader/
+
 A simple open-source tool to scale sewing patterns to different sizes.
 
 ## Features
