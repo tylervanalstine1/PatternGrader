@@ -64,7 +64,7 @@ th {
 .measurement {
     display: flex;
     align-items: center;
-    gap: 30px;           /* Adds space between the inputs and the remove button */
-    margin-bottom: 30px; /* Adds space between each measurement row */
+    gap: -30px;           /* Adds space between the inputs and the remove button */
+    margin-bottom: -30px; /* Adds space between each measurement row */
 }
 }
