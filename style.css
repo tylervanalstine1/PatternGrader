@@ -69,3 +69,10 @@ th {
     background-color: #f2f2f2;
 
 }
+input[type="text"], input[type="number"] {
+    padding: 10px; /* More padding inside inputs */
+}
+
+button {
+    padding: 8px 12px; /* Adjust button size for better spacing */
+}
