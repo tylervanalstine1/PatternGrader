@@ -42,6 +42,11 @@ button {
     cursor: pointer;
 }
 
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
 button:hover {
     background-color: #45a049;
 }
@@ -60,4 +65,44 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+.measurement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.measurement select,
+.measurement input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.remove-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
 }

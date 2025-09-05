@@ -13,16 +13,37 @@
 
     <div id="measurements-container">
         <div class="measurement">
-            <input type="text" placeholder="Measurement Name" class="m-name">
+            <select class="m-name" onchange="toggleCustomInput(this)">
+                <option value="">Select measurement type...</option>
+                <option value="Bust/Chest">Bust/Chest</option>
+                <option value="Waist">Waist</option>
+                <option value="Hip">Hip</option>
+                <option value="Shoulder Width">Shoulder Width</option>
+                <option value="Sleeve Length">Sleeve Length</option>
+                <option value="Arm Length">Arm Length</option>
+                <option value="Neck">Neck</option>
+                <option value="Inseam">Inseam</option>
+                <option value="Outseam">Outseam</option>
+                <option value="Rise">Rise</option>
+                <option value="Thigh">Thigh</option>
+                <option value="Custom">Custom (type below)</option>
+            </select>
+            <input type="text" placeholder="Custom measurement name" class="m-custom" style="display: none;">
             <input type="number" placeholder="Value" class="m-value">
-            <button type="button" onclick="removeMeasurement(this)">Remove</button>
+            <button type="button" class="remove-btn" onclick="removeMeasurement(this)" title="Remove measurement">×</button>
         </div>
     </div>
 
-    <button type="button" onclick="addMeasurement()">Add Measurement</button><br><br>
+    <div class="button-container">
+        <button type="button" onclick="addMeasurement()">Add Measurement</button>
+    </div>
 
-    <label>Grading Factor (%): <input type="number" id="factor" value="10"></label><br><br>
-    <button type="button" onclick="gradePattern()">Calculate</button>
+    <div class="button-container">
+        <label>Grading Factor (%): <input type="number" id="factor" value="10"></label>
+    </div>
+    <div class="button-container">
+        <button type="button" onclick="gradePattern()">Calculate</button>
+    </div>
 
     <h2>New Measurements:</h2>
     <table id="result-table">
