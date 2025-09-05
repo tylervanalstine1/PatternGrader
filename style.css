@@ -60,4 +60,11 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+
+.measurement {
+    display: flex;
+    align-items: center;
+    gap: 16px;           /* Adds space between the inputs and the remove button */
+    margin-bottom: 16px; /* Adds space between each measurement row */
+}
 }
